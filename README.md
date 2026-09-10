@@ -1,8 +1,27 @@
 # 规则驱动的分货决策引擎（Rule-based Allocation Engine）
 
+[![CI](https://github.com/Aiden-paradox/rule-allocation-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/Aiden-paradox/rule-allocation-engine/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
+
 一个可直接运行的决策系统小项目：把“老员工凭经验分货”的模糊判断，转化为**清晰、可配置、可验证、可复现**的规则与代码，并输出可审计的分货方案与经营指标。
 
 > 场景灵感来自真实业务：新品预测、渠道分货、库存分配、物流规划等复杂决策问题。项目不依赖任何第三方库，只用 Python 标准库，克隆后即可运行。
+
+## 核心结果（30 秒看懂）
+
+同一批库存、同一组需求，只改规则，结果就不同——这就是“规则必须显性化、可对比”的证明：
+
+| 指标 | baseline（稳健分配） | growth（倾斜重点渠道） |
+| --- | --- | --- |
+| 整体满足率 | 63.7% | **67.2%** |
+| 最低渠道满足率 | **50.4%** | 44.8% |
+| 渠道满足率基尼系数（越小越公平） | **0.0804** | 0.1209 |
+| 未满足需求 | 1180 | 1065 |
+| 需求预测回测 MAPE | 16.43%（加权移动平均） | 16.43% |
+
+结论：向重点渠道倾斜能提高整体满足率，但会牺牲渠道公平性——这类取舍可以量化、可以讨论，而不是靠“感觉”。
 
 ## 一、业务问题
 
@@ -121,3 +140,12 @@ dji-decision-engine/
 ## License
 
 MIT
+
+## 作者
+
+- 黄振宇（Huang Zhenyu）
+- 华南理工大学 材料科学与工程 本硕连读（2027 届）
+- 方向：材料研发 / 数据驱动决策 / AI + 材料
+- 联系：1416721317@qq.com
+
+这是个人作品项目：用一个小而完整的系统，演示如何把模糊的业务经验，翻译成可验证的规则、可复现的代码和可比较的指标。
