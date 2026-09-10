@@ -1,0 +1,12 @@
+{
+  "name": "growth",
+  "safety_stock_ratio": 0.05,
+  "min_fill_ratio": 0.40,
+  "max_share_per_channel": 0.70,
+  "priority_weights": {
+    "旗舰店": 4,
+    "电商自营": 3,
+    "线下经销": 1,
+    "新渠道": 2
+  }
+}

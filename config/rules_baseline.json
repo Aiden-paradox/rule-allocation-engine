@@ -1,0 +1,12 @@
+{
+  "name": "baseline",
+  "safety_stock_ratio": 0.10,
+  "min_fill_ratio": 0.50,
+  "max_share_per_channel": 0.60,
+  "priority_weights": {
+    "旗舰店": 3,
+    "电商自营": 2,
+    "线下经销": 2,
+    "新渠道": 1
+  }
+}
